@@ -17,6 +17,8 @@
 
 - **Search** by title as you type. Accents don't matter, so `acao` finds `Ação`.
 - **Filter** by hero or by year with the Filters button.
+- **Switch views** between cards and a spreadsheet-style list with Year, Title and Tags columns.
+- **Download** what you see as a CSV file, ready for Excel or Google Sheets.
 - **Share** what you found: the search and filter are part of the page address, for example [every Batman movie](https://xrissmark.github.io/DCList/?hero=batman).
 - **Read it in your language:** the list is available in [English](https://xrissmark.github.io/DCList/) and [Brazilian Portuguese](https://xrissmark.github.io/DCList/ptbr.html).
 

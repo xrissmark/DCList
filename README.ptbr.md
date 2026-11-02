@@ -17,6 +17,8 @@
 
 - **Buscar** pelo título enquanto digita. Os acentos não importam, então `acao` encontra `Ação`.
 - **Filtrar** por herói ou por ano com o botão Filtros.
+- **Trocar a visualização** entre cartões e uma lista estilo planilha, com as colunas Ano, Título e Tags.
+- **Baixar** o que está na tela como um arquivo CSV, pronto para o Excel ou o Google Sheets.
 - **Compartilhar** o que encontrou: a busca e o filtro ficam no endereço da página, por exemplo [todos os filmes do Batman](https://xrissmark.github.io/DCList/ptbr.html?hero=batman).
 - **Ler no seu idioma:** a lista está disponível em [português](https://xrissmark.github.io/DCList/ptbr.html) e em [inglês](https://xrissmark.github.io/DCList/).
 
