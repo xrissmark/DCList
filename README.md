@@ -192,6 +192,10 @@
         </tr>
         <tr>
             <td>2014</td>
+            <td>Batman: Strange Days</td>
+        </tr>
+        <tr>
+            <td>2014</td>
             <td>Son of Batman</td>
         </tr>
         <tr>
