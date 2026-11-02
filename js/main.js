@@ -11,10 +11,13 @@
   var sheet = document.getElementById('sheet');
   var views = document.getElementById('views');
   var download = document.getElementById('download');
+  var viewer = document.getElementById('viewer');
+  var viewerImg = viewer.querySelector('img');
   var groups = [].slice.call(document.querySelectorAll('section.year'));
   var items = [].slice.call(document.querySelectorAll('.movies li')).map(function (li) {
     return {
       li: li,
+      title: li.querySelector('.title'),
       text: li.textContent.trim(),
       year: li.closest('section').dataset.year,
       heroes: li.dataset.heroes.split(' ')
@@ -32,6 +35,11 @@
 
   items.forEach(function (it) {
     it.norm = norm(it.text);
+    var cover = it.li.querySelector('img');
+    cover.tabIndex = 0;
+    cover.setAttribute('role', 'button');
+    cover.setAttribute('aria-haspopup', 'dialog');
+    cover.setAttribute('aria-label', it.text);
     it.row = sheet.tBodies[0].insertRow();
     it.row.insertCell().textContent = it.year;
     it.cell = it.row.insertCell();
@@ -67,7 +75,7 @@
       var ok = matches(it) && (!q || it.norm.indexOf(q) > -1);
       it.li.hidden = !ok;
       it.row.hidden = !ok;
-      if (ok) { shown++; setText(it.li, it, q); setText(it.cell, it, q); }
+      if (ok) { shown++; setText(it.title, it, q); setText(it.cell, it, q); }
     });
     groups.forEach(function (g) {
       var n = g.querySelectorAll('li:not([hidden])').length;
@@ -126,6 +134,12 @@
 
   function reset() { input.value = ''; value = ''; apply(); }
 
+  function showPoster(cover) {
+    viewerImg.src = cover.getAttribute('src');
+    viewerImg.alt = cover.getAttribute('aria-label');
+    viewer.showModal();
+  }
+
   // Excel opens this correctly thanks to the BOM and the page's separator (pt-BR Excel expects ';')
   function downloadCsv() {
     var head = [].map.call(sheet.tHead.rows[0].cells, function (th) { return th.textContent; });
@@ -166,6 +180,19 @@
     apply();
   });
   window.addEventListener('resize', syncBar);
+  document.querySelector('main').addEventListener('click', function (e) {
+    if (e.target.matches('.movies img')) showPoster(e.target);
+  });
+  document.querySelector('main').addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.movies img')) {
+      e.preventDefault();
+      showPoster(e.target);
+    }
+  });
+  // A click that lands on the dialog itself, not its image, came from the backdrop
+  viewer.addEventListener('click', function (e) {
+    if (e.target === viewer || e.target.closest('.close')) viewer.close();
+  });
   document.addEventListener('keydown', function (e) {
     var typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
     if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey) { e.preventDefault(); input.focus(); input.select(); }
