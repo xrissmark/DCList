@@ -391,6 +391,10 @@
             <td>DC Showcase: Morte</td>
         </tr>
         <tr>
+            <td>2019</td>
+            <td>LEGO DC Batman: Assunto de Família</td>
+        </tr>
+        <tr>
             <td>2020</td>
             <td>Superman: Entre a Foice e o Martelo</td>
         </tr>
@@ -415,8 +419,108 @@
             <td>Batman: Morte em Família</td>
         </tr>
         <tr>
+            <td>2020</td>
+            <td>LEGO DC Shazam!: Magia e Monstros</td>
+        </tr>
+        <tr>
             <td>2021</td>
             <td>Batman: Alma do Dragão</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Sociedade da Justiça: Segunda Guerra Mundial</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Batman: The Long Halloween, Parte 1</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Batman: The Long Halloween, Parte 2</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Injustice</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Os Jovens Titãs em Ação! Vê Space Jam</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Mulher-Gato: Caçada</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Lanterna Verde: Cuidado com Meu Poder</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>DC Liga dos Superpets</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Batman e Superman: A Batalha dos Superfilhos</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Os Jovens Titãs em Ação! e DC Super Hero Girls: Caos no Multiverso</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>DC Showcase: Constantine - A Casa dos Mistérios</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Liga da Justiça x RWBY: Super-Heróis e Caçadores, Parte 1</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Liga da Justiça x RWBY: Super-Heróis e Caçadores, Parte 2</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Batman: A Perdição que Chegou a Gotham</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Scooby-Doo! e Krypto Também!</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Legião dos Super-Heróis</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Liga da Justiça: Mundo da Guerra</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Liga da Justiça: Crise nas Infinitas Terras, Parte 1</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Liga da Justiça: Crise nas Infinitas Terras, Parte 2</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Watchmen: Capítulo I</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Watchmen: Capítulo II</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Liga da Justiça: Crise nas Infinitas Terras, Parte 3</td>
+        </tr>
+        <tr>
+            <td>2025</td>
+            <td>Batman Ninja vs. Liga Yakuza</td>
+        </tr>
+        <tr>
+            <td>2025</td>
+            <td>Batman Asteca: Choque de Impérios</td>
         </tr>
     </tbody>
 </table>

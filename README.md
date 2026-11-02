@@ -376,10 +376,6 @@
         </tr>
         <tr>
             <td>2019</td>
-            <td>Wonder Woman: Bloodlines</td>
-        </tr>
-        <tr>
-            <td>2019</td>
             <td>DC Showcase: Adam Strange</td>
         </tr>
         <tr>
@@ -389,6 +385,10 @@
         <tr>
             <td>2019</td>
             <td>DC Showcase: Death</td>
+        </tr>
+        <tr>
+            <td>2019</td>
+            <td>LEGO DC Batman: Family Matters</td>
         </tr>
         <tr>
             <td>2020</td>
@@ -415,8 +415,108 @@
             <td>Batman: Death in the Family</td>
         </tr>
         <tr>
+            <td>2020</td>
+            <td>LEGO DC Shazam!: Magic and Monsters</td>
+        </tr>
+        <tr>
             <td>2021</td>
             <td>Batman: Soul of the Dragon</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Justice Society: World War II</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Batman: The Long Halloween, Part One</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Batman: The Long Halloween, Part Two</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Injustice</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>Teen Titans Go! See Space Jam</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Catwoman: Hunted</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Green Lantern: Beware My Power</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>DC League of Super-Pets</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Batman and Superman: Battle of the Super Sons</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>Teen Titans Go! &amp; DC Super Hero Girls: Mayhem in the Multiverse</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>DC Showcase: Constantine - The House of Mystery</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Justice League x RWBY: Super Heroes &amp; Huntsmen, Part One</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Justice League x RWBY: Super Heroes &amp; Huntsmen, Part Two</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Batman: The Doom That Came to Gotham</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Scooby-Doo! and Krypto, Too!</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Legion of Super-Heroes</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>Justice League: Warworld</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Justice League: Crisis on Infinite Earths, Part One</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Justice League: Crisis on Infinite Earths, Part Two</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Watchmen: Chapter I</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Watchmen: Chapter II</td>
+        </tr>
+        <tr>
+            <td>2024</td>
+            <td>Justice League: Crisis on Infinite Earths, Part Three</td>
+        </tr>
+        <tr>
+            <td>2025</td>
+            <td>Batman Ninja vs. Yakuza League</td>
+        </tr>
+        <tr>
+            <td>2025</td>
+            <td>Aztec Batman: Clash of Empires</td>
         </tr>
     </tbody>
 </table>
