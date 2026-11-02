@@ -33,7 +33,7 @@ function readMovies() {
   const html = readFileSync(join(ROOT, 'index.html'), 'utf8');
   const movies = [];
   for (const [section, year] of html.matchAll(/<section class="year" data-year="(\d{4})"[\s\S]*?<\/section>/g)) {
-    for (const [, text] of section.matchAll(/<li[^>]*>(.*?)<\/li>/g)) {
+    for (const [, text] of section.matchAll(/<span class="title">(.*?)<\/span>/g)) {
       const title = text.replace(/&amp;/g, '&').trim();
       movies.push({ year: Number(year), title, name: fileName(year, title) });
     }
