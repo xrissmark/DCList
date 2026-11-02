@@ -1,571 +1,347 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista de Animações da DC</title>
+  <meta name="description" content="Todas as Animações da DC Listadas">
+  <meta name="theme-color" content="#0b0f17">
+  <link rel="icon" href="images/dc-logo.png">
 
-    <title>Lista de Animações da DC</title>
-    <link rel="icon" href="images/dc-logo.png">
-
-    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css">
-    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <meta property="og:url"         content="https://xrissmark.github.io/DCList/ptbr.html" />
-    <meta property="og:type"        content="article" />
-    <meta property="og:title"       content="Lista de Animações da DC" />
-    <meta property="og:description" content="Todas as Animações da DC Listadas" />
+  <meta property="og:url" content="https://xrissmark.github.io/DCList/ptbr.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Lista de Animações da DC">
+  <meta property="og:description" content="Todas as Animações da DC Listadas">
+  <meta property="og:image" content="https://xrissmark.github.io/DCList/images/dc-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
+<body>
+  <div class="wrap">
+    <nav class="top">
+      <a class="btn" href="https://github.com/xrissmark/DCList"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+      <a class="btn" href="index.html" hreflang="en" title="View in English">🇺🇸 EN</a>
+    </nav>
+    <header class="hero">
+      <img src="images/dc-logo.png" alt="DC logo" width="132" height="132">
+      <h1>Todas as Animações da DC Listadas</h1>
+    </header>
+  </div>
 
-<body class="p-0">
-    <div>
-        <div class="d-flex flex-row justify-content-end mr-3">
-            <a class="btn btn-secondary mr-2" href="https://github.com/xrissmark/DCList"><i class="fab fa-github"></i>  Ir para o GitHub </a>
-            <a class="btn btn-secondary" href="index.html"> 🇺🇸 EN-US </a>
+  <div class="bar">
+    <div class="wrap">
+      <div class="searchrow">
+        <div class="search" role="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Buscar filmes…" aria-label="Buscar filmes" autocomplete="off" spellcheck="false">
+          <kbd>/</kbd>
         </div>
-
-        <div class="d-flex flex-row justify-content-center">
-            <a><img src="images/dc-logo.png" alt="Logo" width="200" height="200"></a>
+        <button class="btn" id="toggle" type="button" aria-expanded="false" aria-controls="filters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18l-7 8.5V20l-4-2v-4.5z"/></svg> Filtros <span class="badge" id="badge" hidden>1</span></button>
+      </div>
+      <div class="filters" id="filters" hidden>
+        <div class="mode">
+          <span id="by">Filtrar por</span>
+          <div class="switch" role="group" aria-labelledby="by">
+            <button type="button" data-mode="hero" aria-pressed="true">Herói</button>
+            <button type="button" data-mode="year" aria-pressed="false">Ano</button>
+          </div>
         </div>
-        <br/>
-        <div class="d-flex flex-row justify-content-center">
-            <h1>Todas as Animações da DC Listadas</h1>
-        </div>
-        <br/>
-
-        <div class="d-flex flex-row justify-content-center">
-            <table class="table table-hover table-striped w-50">
-                <thead>
-                    <tr>
-                        <th>Ano</th>
-                        <th>Filme</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1972</td>
-                        <td>Scooby-Doo Encontra Batman</td>
-                    </tr>
-                    <tr>
-                        <td>1993</td>
-                        <td>Batman - A Máscara do Fantasma</td>
-                    </tr>
-                    <tr>
-                        <td>1996</td>
-                        <td>Superman - O Último Filho de Krypton</td>
-                    </tr>
-                    <tr>
-                        <td>1998</td>
-                        <td>Superman & Batman – Os Melhores do Mundo</td>
-                    </tr>
-                    <tr>
-                        <td>1998</td>
-                        <td>Batman & Mr. Freeze – Abaixo de Zero</td>
-                    </tr>
-                    <tr>
-                        <td>1999</td>
-                        <td>Batman do Futuro: O Filme</td>
-                    </tr>
-                    <tr>
-                        <td>2000</td>
-                        <td>Batman do Futuro - O Retorno do Coringa</td>
-                    </tr>
-                    <tr>
-                        <td>2001</td>
-                        <td>Liga da Justiça: Origem Secreta</td>
-                    </tr>
-                    <tr>
-                        <td>2003</td>
-                        <td>Batman - O Mistério Da Mulher Morcego</td>
-                    </tr>
-                    <tr>
-                        <td>2003</td>
-                        <td>Persiga-me</td>
-                    </tr>
-                    <tr>
-                        <td>2004</td>
-                        <td>Liga da Justiça: Escrito nas Estrelas – O Filme</td>
-                    </tr>
-                    <tr>
-                        <td>2005</td>
-                        <td>Batman vs. Drácula</td>
-                    </tr>
-                    <tr>
-                        <td>2006</td>
-                        <td>Superman: Brainiac Ataca</td>
-                    </tr>
-                    <tr>
-                        <td>2006</td>
-                        <td>Os Jovens Titãs: Missão Tóquio</td>
-                    </tr>
-                    <tr>
-                        <td>2007</td>
-                        <td>A Morte do Superman / Superman Doomsday</td>
-                    </tr>
-                    <tr>
-                        <td>2008</td>
-                        <td>Batman – O Cavaleiro de Gotham</td>
-                    </tr>
-                    <tr>
-                        <td>2008</td>
-                        <td>Liga da Justiça – A Nova Fronteira</td>
-                    </tr>
-                    <tr>
-                        <td>2009</td>
-                        <td>Mulher Maravilha</td>
-                    </tr>
-                    <tr>
-                        <td>2009</td>
-                        <td>Lanterna Verde: Primeiro Vôo</td>
-                    </tr>
-                    <tr>
-                        <td>2009</td>
-                        <td>Superman & Batman: Inimigos Públicos</td>
-                    </tr>
-                    <tr>
-                        <td>2009</td>
-                        <td>Watchmen – Contos do Cargueiro Negro</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>Batman Contra o Capuz Vermelho</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>Superman & Batman: Apocalipse</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>Liga da Justiça: Crise em Duas Terras</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>DC Showcase: Arqueiro Verde</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>DC Showcase: Espectro</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>DC Showcase: Jonah Hex</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>Superman e Shazam: O Retorno do Adão Negro</td>
-                    </tr>
-                    <tr>
-                        <td>2011</td>
-                        <td>DC Showcase: Mulher-Gato</td>
-                    </tr>
-                    <tr>
-                        <td>2011</td>
-                        <td>Batman: Ano Um</td>
-                    </tr>
-                    <tr>
-                        <td>2011</td>
-                        <td>Lanterna Verde: Cavaleiros Esmeralda</td>
-                    </tr>
-                    <tr>
-                        <td>2011</td>
-                        <td>Grandes Astros: Superman</td>
-                    </tr>
-                    <tr>
-                        <td>2012</td>
-                        <td>Superman Contra a Elite</td>
-                    </tr>
-                    <tr>
-                        <td>2012</td>
-                        <td>Liga da Justiça: A Legião do Mal</td>
-                    </tr>
-                    <tr>
-                        <td>2012</td>
-                        <td>Batman: O Cavaleiro das Trevas, Parte 1</td>
-                    </tr>
-                    <tr>
-                        <td>2013</td>
-                        <td>Batman: O Retorno do Cavaleiro das Trevas, Parte 2</td>
-                    </tr>
-                    <tr>
-                        <td>2013</td>
-                        <td>Liga da Justiça: Ponto de Ignição</td>
-                    </tr>
-                    <tr>
-                        <td>2013</td>
-                        <td>Batman LEGO - O Filme - Super Heróis Se Unem</td>
-                    </tr>
-                    <tr>
-                        <td>2013</td>
-                        <td>Superman: Sem Limites</td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>Batman LEGO - Bem-Ligado</td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>Batman: Assalto em Arkham</td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>As Aventuras da Liga da Justiça – Armadilha do Tempo</td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>Liga da Justiça: Guerra</td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>Batman: Dias Estranhos</td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>O Filho do Batman</td>
-                    </tr>
-                    <tr>
-                        <td>2014</td>
-                        <td>Uma Aventura LEGO</td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td>Liga da Justiça: Trono de Atlântida</td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td>Batman Vs. Robin</td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td>Batman Sem Limites: Instintos Animais</td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td>Batman Sem Limites: Caos Monstruoso</td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td>LEGO - Liga da Justiça Vs. Liga Bizarro</td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td>LEGO DC Comics Super Heróis: Liga da Justiça - O Ataque da Legião do Mal</td>
-                    </tr>
-                    <tr>
-                        <td>2015</td>
-                        <td>Liga da Justiça: Deuses e Monstros</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>Batman Sem Limites: Mechas vs Mutantes</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>Batman: Sangue Ruim</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>Batman: O Retorno da Dupla Dinâmica</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>Batman: A Piada Mortal</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>Liga da Justiça Contra Jovens Titãs</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>LEGO DC Comics Super Heróis: Liga da Justiça - Combate Cósmico</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>LEGO DC Comics Super Heróis: Liga da Justiça - Revolta em Gotham</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>DC Super Hero Girls: Heroinas do Ano</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>DC Super Hero Girls: Super Hero High</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>Batman vs Duas Caras</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>DC Super Hero Girls: Jogos Intergalácticos</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>Liga da Justiça Sombria</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>Batman e Arlequina: Pancadas e Risadas</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>LEGO Batman: O Filme</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>Vixen</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>Jovens Titãs: O Contrato de Judas</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>LEGO DC Super Hero Girls: Controle Mental</td>
-                    </tr>
-                    <tr>
-                        <td>2017</td>
-                        <td>DC Super Heroes vs. Eagle Talon</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>Um Conto de Batman: Gotham City 1889</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>DC Super Hero Girls: Lendas de Atlântida</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>LEGO Super Heróis DC: O Flash</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>Os Jovens Titãs em Ação! Nos Cinemas</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>LEGO DC Super Hero Girls: Escola de Super Vilãs</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>Scooby-Doo & Batman: Os Bravos e Destemidos</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>Batman Ninja</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>DC Combatentes da Liberdade – Ray</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>Constantine: Cidade dos Demônios</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>Esquadrão Suicida: Acerto de Contas</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>LEGO DC Comics Super Heróis - Aquaman: A Fúria de Atlântida</td>
-                    </tr>
-                    <tr>
-                        <td>2018</td>
-                        <td>A Morte de Superman</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>Uma Aventura LEGO 2</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>O Retorno do Superman</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>Liga da Justiça vs Os Cinco Fatais</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>Batman vs As Tartarugas Ninjas</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>Batman: Silêncio</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>Os Jovens Titãs em Ação! Vs. Os Jovens Titãs</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>Mulher Maravilha: Linhagem de Sangue</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>DC Showcase: Adam Strange</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>DC Showcase: Sgt. Rock</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>DC Showcase: Morte</td>
-                    </tr>
-                    <tr>
-                        <td>2019</td>
-                        <td>LEGO DC Batman: Assunto de Família</td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td>Superman: Entre a Foice e o Martelo</td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td>Liga da Justiça Sombria: A Guerra de Apokolips</td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td>Exterminador: Cavaleiros e Dragões – O Filme</td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td>Superman: O Homem do Amanhã</td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td>DC Showcase: Vingador Fantasma</td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td>Batman: Morte em Família</td>
-                    </tr>
-                    <tr>
-                        <td>2020</td>
-                        <td>LEGO DC Shazam!: Magia e Monstros</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Batman: Alma do Dragão</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Sociedade da Justiça: Segunda Guerra Mundial</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Batman: The Long Halloween, Parte 1</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Batman: The Long Halloween, Parte 2</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Injustice</td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Os Jovens Titãs em Ação! Vê Space Jam</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>Mulher-Gato: Caçada</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>Lanterna Verde: Cuidado com Meu Poder</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>DC Liga dos Superpets</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>Batman e Superman: A Batalha dos Superfilhos</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>Os Jovens Titãs em Ação! e DC Super Hero Girls: Caos no Multiverso</td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>DC Showcase: Constantine - A Casa dos Mistérios</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Liga da Justiça x RWBY: Super-Heróis e Caçadores, Parte 1</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Liga da Justiça x RWBY: Super-Heróis e Caçadores, Parte 2</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Batman: A Perdição que Chegou a Gotham</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Scooby-Doo! e Krypto Também!</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Legião dos Super-Heróis</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Liga da Justiça: Mundo da Guerra</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Liga da Justiça: Crise nas Infinitas Terras, Parte 1</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Liga da Justiça: Crise nas Infinitas Terras, Parte 2</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Watchmen: Capítulo I</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Watchmen: Capítulo II</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Liga da Justiça: Crise nas Infinitas Terras, Parte 3</td>
-                    </tr>
-                    <tr>
-                        <td>2025</td>
-                        <td>Batman Ninja vs. Liga Yakuza</td>
-                    </tr>
-                    <tr>
-                        <td>2025</td>
-                        <td>Batman Asteca: Choque de Impérios</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class="chips" id="chips-hero" role="group" aria-label="Herói"><button class="chip" type="button" data-value="batman" aria-pressed="false">Batman</button><button class="chip" type="button" data-value="superman" aria-pressed="false">Superman</button><button class="chip" type="button" data-value="wonder-woman" aria-pressed="false">Mulher Maravilha</button><button class="chip" type="button" data-value="justice-league" aria-pressed="false">Liga da Justiça</button><button class="chip" type="button" data-value="teen-titans" aria-pressed="false">Jovens Titãs</button><button class="chip" type="button" data-value="green-lantern" aria-pressed="false">Lanterna Verde</button><button class="chip" type="button" data-value="flash" aria-pressed="false">Flash</button><button class="chip" type="button" data-value="aquaman" aria-pressed="false">Aquaman</button><button class="chip" type="button" data-value="shazam" aria-pressed="false">Shazam</button><button class="chip" type="button" data-value="catwoman" aria-pressed="false">Mulher-Gato</button><button class="chip" type="button" data-value="constantine" aria-pressed="false">Constantine</button><button class="chip" type="button" data-value="suicide-squad" aria-pressed="false">Esquadrão Suicida</button><button class="chip" type="button" data-value="super-hero-girls" aria-pressed="false">Super Hero Girls</button><button class="chip" type="button" data-value="other" aria-pressed="false">Outros</button></div>
+        <div class="chips" id="chips-year" role="group" aria-label="Ano" hidden><button class="chip" type="button" data-value="1972" aria-pressed="false">1972</button><button class="chip" type="button" data-value="1993" aria-pressed="false">1993</button><button class="chip" type="button" data-value="1996" aria-pressed="false">1996</button><button class="chip" type="button" data-value="1998" aria-pressed="false">1998</button><button class="chip" type="button" data-value="1999" aria-pressed="false">1999</button><button class="chip" type="button" data-value="2000" aria-pressed="false">2000</button><button class="chip" type="button" data-value="2001" aria-pressed="false">2001</button><button class="chip" type="button" data-value="2003" aria-pressed="false">2003</button><button class="chip" type="button" data-value="2004" aria-pressed="false">2004</button><button class="chip" type="button" data-value="2005" aria-pressed="false">2005</button><button class="chip" type="button" data-value="2006" aria-pressed="false">2006</button><button class="chip" type="button" data-value="2007" aria-pressed="false">2007</button><button class="chip" type="button" data-value="2008" aria-pressed="false">2008</button><button class="chip" type="button" data-value="2009" aria-pressed="false">2009</button><button class="chip" type="button" data-value="2010" aria-pressed="false">2010</button><button class="chip" type="button" data-value="2011" aria-pressed="false">2011</button><button class="chip" type="button" data-value="2012" aria-pressed="false">2012</button><button class="chip" type="button" data-value="2013" aria-pressed="false">2013</button><button class="chip" type="button" data-value="2014" aria-pressed="false">2014</button><button class="chip" type="button" data-value="2015" aria-pressed="false">2015</button><button class="chip" type="button" data-value="2016" aria-pressed="false">2016</button><button class="chip" type="button" data-value="2017" aria-pressed="false">2017</button><button class="chip" type="button" data-value="2018" aria-pressed="false">2018</button><button class="chip" type="button" data-value="2019" aria-pressed="false">2019</button><button class="chip" type="button" data-value="2020" aria-pressed="false">2020</button><button class="chip" type="button" data-value="2021" aria-pressed="false">2021</button><button class="chip" type="button" data-value="2022" aria-pressed="false">2022</button><button class="chip" type="button" data-value="2023" aria-pressed="false">2023</button><button class="chip" type="button" data-value="2024" aria-pressed="false">2024</button><button class="chip" type="button" data-value="2025" aria-pressed="false">2025</button></div>
+      </div>
+      <div class="meta">
+        <span id="count" aria-live="polite" data-of="de" data-unit="filmes"></span>
+        <button class="btn" id="clear" type="button" hidden>Remover filtros</button>
+      </div>
     </div>
+  </div>
 
-    <hr/>
+  <main class="wrap">
+    <section class="year" data-year="1972" id="y1972">
+      <h2>1972 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Scooby-Doo Encontra Batman</li>
+      </ul>
+    </section>
+    <section class="year" data-year="1993" id="y1993">
+      <h2>1993 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman - A Máscara do Fantasma</li>
+      </ul>
+    </section>
+    <section class="year" data-year="1996" id="y1996">
+      <h2>1996 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="superman">Superman - O Último Filho de Krypton</li>
+      </ul>
+    </section>
+    <section class="year" data-year="1998" id="y1998">
+      <h2>1998 <small>2</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman superman">Superman &amp; Batman – Os Melhores do Mundo</li>
+        <li data-heroes="batman">Batman &amp; Mr. Freeze – Abaixo de Zero</li>
+      </ul>
+    </section>
+    <section class="year" data-year="1999" id="y1999">
+      <h2>1999 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman do Futuro: O Filme</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2000" id="y2000">
+      <h2>2000 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman do Futuro - O Retorno do Coringa</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2001" id="y2001">
+      <h2>2001 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="justice-league">Liga da Justiça: Origem Secreta</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2003" id="y2003">
+      <h2>2003 <small>2</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman - O Mistério Da Mulher Morcego</li>
+        <li data-heroes="batman catwoman">Persiga-me</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2004" id="y2004">
+      <h2>2004 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="justice-league">Liga da Justiça: Escrito nas Estrelas – O Filme</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2005" id="y2005">
+      <h2>2005 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman vs. Drácula</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2006" id="y2006">
+      <h2>2006 <small>2</small></h2>
+      <ul class="movies">
+        <li data-heroes="superman">Superman: Brainiac Ataca</li>
+        <li data-heroes="teen-titans">Os Jovens Titãs: Missão Tóquio</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2007" id="y2007">
+      <h2>2007 <small>1</small></h2>
+      <ul class="movies">
+        <li data-heroes="superman">A Morte do Superman / Superman Doomsday</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2008" id="y2008">
+      <h2>2008 <small>2</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman – O Cavaleiro de Gotham</li>
+        <li data-heroes="justice-league">Liga da Justiça – A Nova Fronteira</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2009" id="y2009">
+      <h2>2009 <small>4</small></h2>
+      <ul class="movies">
+        <li data-heroes="wonder-woman">Mulher Maravilha</li>
+        <li data-heroes="green-lantern">Lanterna Verde: Primeiro Vôo</li>
+        <li data-heroes="batman superman">Superman &amp; Batman: Inimigos Públicos</li>
+        <li data-heroes="other">Watchmen – Contos do Cargueiro Negro</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2010" id="y2010">
+      <h2>2010 <small>7</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman Contra o Capuz Vermelho</li>
+        <li data-heroes="batman superman">Superman &amp; Batman: Apocalipse</li>
+        <li data-heroes="justice-league">Liga da Justiça: Crise em Duas Terras</li>
+        <li data-heroes="other">DC Showcase: Arqueiro Verde</li>
+        <li data-heroes="other">DC Showcase: Espectro</li>
+        <li data-heroes="other">DC Showcase: Jonah Hex</li>
+        <li data-heroes="superman shazam">Superman e Shazam: O Retorno do Adão Negro</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2011" id="y2011">
+      <h2>2011 <small>4</small></h2>
+      <ul class="movies">
+        <li data-heroes="catwoman">DC Showcase: Mulher-Gato</li>
+        <li data-heroes="batman">Batman: Ano Um</li>
+        <li data-heroes="green-lantern">Lanterna Verde: Cavaleiros Esmeralda</li>
+        <li data-heroes="superman">Grandes Astros: Superman</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2012" id="y2012">
+      <h2>2012 <small>3</small></h2>
+      <ul class="movies">
+        <li data-heroes="superman">Superman Contra a Elite</li>
+        <li data-heroes="justice-league">Liga da Justiça: A Legião do Mal</li>
+        <li data-heroes="batman">Batman: O Cavaleiro das Trevas, Parte 1</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2013" id="y2013">
+      <h2>2013 <small>4</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman: O Retorno do Cavaleiro das Trevas, Parte 2</li>
+        <li data-heroes="justice-league flash">Liga da Justiça: Ponto de Ignição</li>
+        <li data-heroes="batman">Batman LEGO - O Filme - Super Heróis Se Unem</li>
+        <li data-heroes="superman">Superman: Sem Limites</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2014" id="y2014">
+      <h2>2014 <small>7</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman LEGO - Bem-Ligado</li>
+        <li data-heroes="batman suicide-squad">Batman: Assalto em Arkham</li>
+        <li data-heroes="justice-league">As Aventuras da Liga da Justiça – Armadilha do Tempo</li>
+        <li data-heroes="justice-league">Liga da Justiça: Guerra</li>
+        <li data-heroes="batman">Batman: Dias Estranhos</li>
+        <li data-heroes="batman">O Filho do Batman</li>
+        <li data-heroes="batman">Uma Aventura LEGO</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2015" id="y2015">
+      <h2>2015 <small>7</small></h2>
+      <ul class="movies">
+        <li data-heroes="justice-league aquaman">Liga da Justiça: Trono de Atlântida</li>
+        <li data-heroes="batman">Batman Vs. Robin</li>
+        <li data-heroes="batman">Batman Sem Limites: Instintos Animais</li>
+        <li data-heroes="batman">Batman Sem Limites: Caos Monstruoso</li>
+        <li data-heroes="justice-league">LEGO - Liga da Justiça Vs. Liga Bizarro</li>
+        <li data-heroes="justice-league">LEGO DC Comics Super Heróis: Liga da Justiça - O Ataque da Legião do Mal</li>
+        <li data-heroes="justice-league">Liga da Justiça: Deuses e Monstros</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2016" id="y2016">
+      <h2>2016 <small>9</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman Sem Limites: Mechas vs Mutantes</li>
+        <li data-heroes="batman">Batman: Sangue Ruim</li>
+        <li data-heroes="batman">Batman: O Retorno da Dupla Dinâmica</li>
+        <li data-heroes="batman">Batman: A Piada Mortal</li>
+        <li data-heroes="justice-league teen-titans">Liga da Justiça Contra Jovens Titãs</li>
+        <li data-heroes="justice-league">LEGO DC Comics Super Heróis: Liga da Justiça - Combate Cósmico</li>
+        <li data-heroes="justice-league">LEGO DC Comics Super Heróis: Liga da Justiça - Revolta em Gotham</li>
+        <li data-heroes="super-hero-girls">DC Super Hero Girls: Heroinas do Ano</li>
+        <li data-heroes="super-hero-girls">DC Super Hero Girls: Super Hero High</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2017" id="y2017">
+      <h2>2017 <small>9</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman vs Duas Caras</li>
+        <li data-heroes="super-hero-girls">DC Super Hero Girls: Jogos Intergalácticos</li>
+        <li data-heroes="justice-league constantine">Liga da Justiça Sombria</li>
+        <li data-heroes="batman">Batman e Arlequina: Pancadas e Risadas</li>
+        <li data-heroes="batman">LEGO Batman: O Filme</li>
+        <li data-heroes="other">Vixen</li>
+        <li data-heroes="teen-titans">Jovens Titãs: O Contrato de Judas</li>
+        <li data-heroes="super-hero-girls">LEGO DC Super Hero Girls: Controle Mental</li>
+        <li data-heroes="justice-league">DC Super Heroes vs. Eagle Talon</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2018" id="y2018">
+      <h2>2018 <small>12</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Um Conto de Batman: Gotham City 1889</li>
+        <li data-heroes="super-hero-girls">DC Super Hero Girls: Lendas de Atlântida</li>
+        <li data-heroes="flash">LEGO Super Heróis DC: O Flash</li>
+        <li data-heroes="teen-titans">Os Jovens Titãs em Ação! Nos Cinemas</li>
+        <li data-heroes="super-hero-girls">LEGO DC Super Hero Girls: Escola de Super Vilãs</li>
+        <li data-heroes="batman">Scooby-Doo &amp; Batman: Os Bravos e Destemidos</li>
+        <li data-heroes="batman">Batman Ninja</li>
+        <li data-heroes="other">DC Combatentes da Liberdade – Ray</li>
+        <li data-heroes="constantine">Constantine: Cidade dos Demônios</li>
+        <li data-heroes="suicide-squad">Esquadrão Suicida: Acerto de Contas</li>
+        <li data-heroes="aquaman">LEGO DC Comics Super Heróis - Aquaman: A Fúria de Atlântida</li>
+        <li data-heroes="superman">A Morte de Superman</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2019" id="y2019">
+      <h2>2019 <small>11</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Uma Aventura LEGO 2</li>
+        <li data-heroes="superman">O Retorno do Superman</li>
+        <li data-heroes="justice-league">Liga da Justiça vs Os Cinco Fatais</li>
+        <li data-heroes="batman">Batman vs As Tartarugas Ninjas</li>
+        <li data-heroes="batman">Batman: Silêncio</li>
+        <li data-heroes="teen-titans">Os Jovens Titãs em Ação! Vs. Os Jovens Titãs</li>
+        <li data-heroes="wonder-woman">Mulher Maravilha: Linhagem de Sangue</li>
+        <li data-heroes="other">DC Showcase: Adam Strange</li>
+        <li data-heroes="other">DC Showcase: Sgt. Rock</li>
+        <li data-heroes="other">DC Showcase: Morte</li>
+        <li data-heroes="batman">LEGO DC Batman: Assunto de Família</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2020" id="y2020">
+      <h2>2020 <small>7</small></h2>
+      <ul class="movies">
+        <li data-heroes="superman">Superman: Entre a Foice e o Martelo</li>
+        <li data-heroes="justice-league constantine">Liga da Justiça Sombria: A Guerra de Apokolips</li>
+        <li data-heroes="other">Exterminador: Cavaleiros e Dragões – O Filme</li>
+        <li data-heroes="superman">Superman: O Homem do Amanhã</li>
+        <li data-heroes="other">DC Showcase: Vingador Fantasma</li>
+        <li data-heroes="batman">Batman: Morte em Família</li>
+        <li data-heroes="shazam">LEGO DC Shazam!: Magia e Monstros</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2021" id="y2021">
+      <h2>2021 <small>6</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman: Alma do Dragão</li>
+        <li data-heroes="other">Sociedade da Justiça: Segunda Guerra Mundial</li>
+        <li data-heroes="batman">Batman: The Long Halloween, Parte 1</li>
+        <li data-heroes="batman">Batman: The Long Halloween, Parte 2</li>
+        <li data-heroes="batman superman justice-league">Injustice</li>
+        <li data-heroes="teen-titans">Os Jovens Titãs em Ação! Vê Space Jam</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2022" id="y2022">
+      <h2>2022 <small>6</small></h2>
+      <ul class="movies">
+        <li data-heroes="catwoman">Mulher-Gato: Caçada</li>
+        <li data-heroes="green-lantern">Lanterna Verde: Cuidado com Meu Poder</li>
+        <li data-heroes="superman">DC Liga dos Superpets</li>
+        <li data-heroes="batman superman">Batman e Superman: A Batalha dos Superfilhos</li>
+        <li data-heroes="teen-titans super-hero-girls">Os Jovens Titãs em Ação! e DC Super Hero Girls: Caos no Multiverso</li>
+        <li data-heroes="constantine">DC Showcase: Constantine - A Casa dos Mistérios</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2023" id="y2023">
+      <h2>2023 <small>6</small></h2>
+      <ul class="movies">
+        <li data-heroes="justice-league">Liga da Justiça x RWBY: Super-Heróis e Caçadores, Parte 1</li>
+        <li data-heroes="justice-league">Liga da Justiça x RWBY: Super-Heróis e Caçadores, Parte 2</li>
+        <li data-heroes="batman">Batman: A Perdição que Chegou a Gotham</li>
+        <li data-heroes="superman">Scooby-Doo! e Krypto Também!</li>
+        <li data-heroes="other">Legião dos Super-Heróis</li>
+        <li data-heroes="justice-league">Liga da Justiça: Mundo da Guerra</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2024" id="y2024">
+      <h2>2024 <small>5</small></h2>
+      <ul class="movies">
+        <li data-heroes="justice-league">Liga da Justiça: Crise nas Infinitas Terras, Parte 1</li>
+        <li data-heroes="justice-league">Liga da Justiça: Crise nas Infinitas Terras, Parte 2</li>
+        <li data-heroes="other">Watchmen: Capítulo I</li>
+        <li data-heroes="other">Watchmen: Capítulo II</li>
+        <li data-heroes="justice-league">Liga da Justiça: Crise nas Infinitas Terras, Parte 3</li>
+      </ul>
+    </section>
+    <section class="year" data-year="2025" id="y2025">
+      <h2>2025 <small>2</small></h2>
+      <ul class="movies">
+        <li data-heroes="batman">Batman Ninja vs. Liga Yakuza</li>
+        <li data-heroes="batman">Batman Asteca: Choque de Impérios</li>
+      </ul>
+    </section>
+    <p class="empty" id="empty" hidden>Nenhum filme encontrado.</p>
+  </main>
 
-    <div class="d-flex flex-row justify-content-center w-30">
-        <p>Se você conhece algum filme que está faltando, por favor abra um ticket no meu GitHub.</p>
+  <div class="wrap">
+    <div class="cta">
+      <p>Conhece algum filme que está faltando?</p>
+      <a class="btn" href="https://github.com/xrissmark/DCList/issues">Abra um ticket</a>
     </div>
-    <div class="d-flex flex-row justify-content-center">
-        <a class="badge badge-primary" href="https://github.com/xrissmark/DCList/issues"> Abrir Ticket</a>
-    </div>
-
-    <hr/>
-
-    <footer class="footer mt-3">
-        <div class="container">
-          <span class="text-muted">2021-2025 - Lista criada e mantida por XrissMark e disponível apenas no GitHub - All hail Pantufas de Satanás</span>
-        </div>
-    </footer>
+    <footer>2021-2025 - Lista criada e mantida por XrissMark e disponível apenas no GitHub - All hail Pantufas de Satanás</footer>
+  </div>
 </body>
-
 </html>
