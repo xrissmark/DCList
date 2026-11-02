@@ -25,3 +25,9 @@
 ## Está faltando algum filme?
 
 [Abra um ticket](https://github.com/xrissmark/DCList/issues) com o título e o ano de lançamento do filme.
+
+## Créditos
+
+As imagens dos pôsteres vêm do [TMDB](https://www.themoviedb.org/). Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.
+
+Este é um projeto feito por fãs. Todos os personagens, títulos e imagens pertencem à DC, à Warner Bros. e aos seus respectivos proprietários.

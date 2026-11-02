@@ -100,6 +100,7 @@ mark{background:var(--mark);color:var(--mark-t);border-radius:3px;padding:0 1px}
 .cta{text-align:center;border-top:1px solid var(--line);padding:28px 0 8px;color:var(--muted)}
 .cta p{margin:0 0 12px}
 footer{text-align:center;color:var(--muted);font-size:.85rem;padding:12px 0 32px}
+footer p{margin:8px 0 0}
 @media (max-width:640px){.bar.open{position:static}}
 @media (max-width:520px){.hero img{width:96px;height:96px}ul.movies{grid-template-columns:1fr}.search kbd{display:none}
   .sheet th,.sheet td{padding:8px}.sheet th:first-child{width:56px}.sheet th:last-child{width:38%}}

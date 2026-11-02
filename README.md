@@ -25,3 +25,9 @@
 ## Is a movie missing?
 
 [Open a ticket](https://github.com/xrissmark/DCList/issues) with the movie's title and release year.
+
+## Credits
+
+Poster images come from [TMDB](https://www.themoviedb.org/). This product uses the TMDB API but is not endorsed or certified by TMDB.
+
+This is a fan-made project. All characters, titles and images belong to DC, Warner Bros. and their respective owners.
